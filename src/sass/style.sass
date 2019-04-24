@@ -1,0 +1,532 @@
+$txt_up : uppercase
+input, button, select, textarea
+    font-weight: 300
+    font-family: 'Titillium Web', sans-serif
+    outline: 0
+
+
+
+.d-f
+	display: flex
+
+.d-b
+	display: block
+
+.wrap
+	flex-wrap: wrap
+
+.text-center
+	text-align: center
+
+
+.white
+	color: #fff
+
+.p-5
+	padding: 0 5%
+
+
+.fl-c
+	display: flex
+	align-items: center
+	justify-content: center
+
+.icon-right-open ,
+.icon-left-open ,
+.icon-down-open
+	font-size: 21px
+	color: #fff
+	font-weight: bold	
+
+*
+	margin: 0
+	padding: 0
+ul
+
+	li
+		list-style: none
+
+
+a
+	list-style: none
+	
+
+h1, h2, h3, h4, h5, h6 
+
+    margin: 0 0 20px 0
+    color: #FFFFFF
+    font-weight: 300
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1.5em
+
+
+
+.fixed
+	position: fixed !important
+	top: 0
+	left: 0
+	z-index: 1001
+
+.container
+	max-width: 1400px
+	width: 100%
+	margin: 0 auto
+	
+
+
+body, html
+	
+	color: #7F8289
+	font-weight: 300
+	font-size: 16px
+	font-family: 'Titillium Web', sans-serif;
+	line-height: 28px
+	height: 100%
+	background: #2F3238
+
+
+main
+	.slider
+		width: 100%
+		height: 100vh
+		
+		box-sizing: border-box
+		.slides
+			width: inherit
+			height: inherit
+			position: relative
+			.slider__navigation
+				position: absolute
+				z-index: 100
+				bottom: 0
+				left: 0
+				right: 0
+				background: #2F3238
+				display: flex
+				justify-content: space-between
+				align-items: center
+				.transition__btn
+					width: 50px
+					height: 50px
+					background-color: #26292E
+					cursor: pointer
+					transition: .3s
+					&:hover
+						background: #DE5E60
+				.slider__btn
+					display: flex
+					.btn__next , 
+					.btn__prev
+						width: 50px
+						height: 50px
+						background-color: #26292E
+						margin: 0 3px 0 0
+						cursor: pointer
+						transition: .3s
+						
+						&:hover
+							background: #DE5E60
+					.btn__prev
+						animation: pike  1s infinite ease-in-out	
+				.slider-bullets
+					text-align: center	
+					.slider-bullet
+						display: inline-block
+						width: 12px
+						height: 12px
+						background-color: #6E7074
+						border-radius: 50%
+						margin: 0 3px
+						cursor: pointer
+						transition: .3s
+						&.active
+							background-color: #DE5E60
+						&:hover
+							background: #fff	
+
+			.slide
+				width: inherit
+				height: inherit
+				background-repeat: no-repeat
+				background-position: center
+				background-size: cover
+				background-attachment: fixed
+				position: relative
+				top: 0
+				left: 0
+				display: flex
+				justify-content: center
+				align-items: center
+				
+				.slide__overlay
+					text-align: center
+					font-size: 40px
+					background-color: rgba(0,0,0,0.2)
+					margin: auto
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 0
+					top: 0
+					width: 100%
+					height: 100%
+					display: flex
+					justify-content: center
+					align-items: center
+					
+
+					.a-fadeName
+						@media screen and (max-width: 764px)
+							font-size: 28px
+							padding: 0 5px
+
+				
+
+				.slide__txt
+					position: absolute
+					bottom: 0
+					left: 0
+					&[data-slide-txt="2"]
+						background: rgba(8, 63, 71,.7)
+						max-width: 611px
+						width: 100%
+						bottom: 70px
+						left: 60px
+						padding: 10px 25px 10px 10px
+						.slide__title[data-slide-title="2"]
+							color: #f7913f
+							font: 30px/40px "Mangal" , sans-serif
+							font-weight: bold
+							text-transform: uppercase
+							letter-spacing: 3px
+
+					&[data-slide-txt="3"]
+						
+						max-width: 611px
+						width: 100%
+						bottom: 70px
+						left: 60px
+						padding: 10px 25px 10px 10px
+						.slide__title[data-slide-title="3"]
+							color: #f7913f
+							font: 30px/40px "Mangal" , sans-serif
+							font-weight: bold
+							text-transform: uppercase
+							letter-spacing: 3px	
+
+					&[data-slide-txt="4"]
+						
+						@extend .slide__txt[data-slide-txt="2"]
+						.slide__title[data-slide-title="4"]
+							color: #f7913f
+							font: 30px/40px "Mangal" , sans-serif
+							font-weight: bold
+							text-transform: uppercase
+							letter-spacing: 3px				
+
+					.slide__rect
+						width: 186px
+						height: 159px
+						position: absolute
+						top: -78px
+						background-repeat: no-repeat
+						background-position: center
+						background-size: cover
+						left: 491px
+						&-txt
+							position: absolute
+							top: 55px
+							left: 32px
+							transform: rotate(-25deg)
+							color: #ffffff
+							font: 16px/16px "Mangal" ,sans-serif;
+							font-weight: bold
+							text-transform: uppercase
+							letter-spacing: 2px
+							@extend .d-f
+							align-items: center
+							span
+								@extend .d-b
+								&:first-child
+									font-size: 29px
+									margin-right: 5px
+					.slide__items
+						display: flex
+						flex-direction: column
+						.slide__item
+							width: max-content
+							background-color: #f7913f
+							color: #ffffff
+							font: 45px/80px "Mangal" ,sans-serif;
+							font-weight: bold
+							text-transform: uppercase
+							letter-spacing: 4.5px
+							&:nth-child(1)
+								color: #064c56
+								padding: 0 51% 0 38%
+							&:nth-child(2)
+								padding: 0 7% 0 16%
+							&:nth-child(3)
+								padding: 0 7% 0 40%
+							&:nth-child(4)
+								padding: 0 7% 0 40%
+							&:nth-child(5)
+								padding: 0 7% 0 37%			
+	
+
+
+	.header
+		background-color: #26292E
+		position: relative
+		width: 100%
+		height: 58px
+		z-index: 1001
+		
+		.container
+			@extend .d-f
+			justify-content: space-between
+			align-items: center
+			.logo
+				@extend .d-b
+				padding: 15px 0
+				margin-left: 20px
+				color: #fff
+				text-decoration: none
+			.header__nav
+				.header__burger-menu
+					display: none
+					@media screen and (max-width: 764px)
+						&
+							display: block
+							margin-right: 20px
+							cursor: pointer
+					span
+						width: 16px
+						height: 3px
+						@extend .d-b
+						background: #fff
+						&:nth-child(2)
+							margin-top: 2px
+						&:last-child
+							margin-top: 2px	
+				.menu__items
+					@extend .d-f
+					@media screen and (max-width: 764px)
+						&
+							display: none
+					a
+						color: #fff
+						text-decoration: none
+						transition: .3s
+						margin-right: 50px
+						font-size: 16px
+						font-weight: 300
+						text-transform: uppercase
+						&.active__item ,
+						&:hover
+							color: #DE5E60
+
+	.header__nav-mobile
+		background: #2F3238
+		display: none
+		
+		.menu__items-mobile
+			.menu__item-mobile
+				background: #26292E
+				text-align: center
+				margin-bottom: 1px
+				a
+					display: block
+					font-size: 16px
+					text-transform: uppercase
+					padding: 20px 0
+					color: #DE5E60
+					text-decoration: none
+					transition: .3s
+					&:hover
+						color: #fff
+		
+
+
+	.portfolio-section
+		padding: 100px 0
+		.container
+			
+			.portfolio__title
+				text-align: center
+				font-size: 48px
+				margin: 0 0 10px 0
+			.portfolio__subtitle
+				text-align: center
+				margin-bottom: 40px
+			.portfolio__items
+				@extend .d-f
+				max-width: 1000px
+				margin: 0 auto
+				justify-content: space-between
+				flex-wrap: wrap
+				align-items: center
+				margin: 0 auto
+				
+				.portfolio__item
+					max-width: 220px
+					width: 24%
+					height: 155px
+					background-repeat: no-repeat
+					background-size: cover
+					background-position: left center
+					position: relative
+					margin-bottom: 35px
+					flex-wrap: wrap
+					transition: .3s
+					overflow: hidden
+					@media screen and (max-width: 764px)
+						width: 75%
+						height: 238px
+						max-width: 75%
+						background-size: 100%
+						background-position: center
+						flex-wrap: wrap
+						margin: 20px auto
+						border: 1px solid #fff
+
+					&:hover
+						transform: scale(1.1)
+						.portfolio__item-hidden-link
+							bottom: 0
+
+
+						
+					.portfolio__item-hidden-link
+						@extend .d-b
+						background: rgba(0,0,0,.3)
+						color: #fff !important
+						position: absolute
+						bottom: -50px
+						left: 0
+						right: 0
+						z-index: 5
+						text-align: center
+						transition: .3s
+						padding: 5px 5px
+
+
+					.overlay-item
+						display: block
+						position: absolute
+						top: 0
+						bottom: 0
+						left: 0
+						right: 0
+						background: #000
+						opacity: 0.3
+						transition: .3s
+						z-index: 4
+						&:hover , 
+							opacity: 0.1
+
+	.biography
+		background: #26292E
+		&__title
+			padding: 50px 0
+
+		&__photo
+			width: 250px
+			height: 250px
+			margin: auto
+			background-repeat: no-repeat
+			background-position: center top
+			background-size: 100%	
+			border-radius: 50%	
+		&__description
+			width: 90%
+			margin: 15px auto
+			padding: 15px 0		
+							
+	
+	.contact-page
+		background: #2F3238
+		margin: 50px 15px
+		.container
+			@extend .d-f
+			flex-direction: row
+			justify-content: space-between
+			@media screen and (max-width: 764px)
+				&
+					flex-direction: column
+
+				.contact
+					margin-bottom: 25px	
+
+			.contact
+
+				flex-basis: 70%
+				.contact__name ,
+				.contact__email ,
+				.contact__message
+
+					.contact__input, 
+					.contact__message__input
+						width: 95%
+						border: none
+						border-radius: 0
+						box-shadow: none
+						background: #26292E
+						color: #fff
+						font-size: 16px
+						height: auto
+						padding: 15px
+						margin: 0
+						resize: none
+
+				.contact__email > .contact__input
+					margin: 2px 0
+		
+				.contact__message__input
+					color: #fff
+					
+				.contact__button
+					background: #3C3F45
+					border: none
+					color: #23262C
+					cursor: pointer
+					display: inline-block
+					font-size: 18px
+					font-weight: 500
+					padding: 16px 40px
+					text-align: center
+					vertical-align: middle
+					width: auto
+					margin-top: 30px
+					transition: background 0.1s linear 0s, color 0.1s linear 0s
+					border-radius: 3px
+					&:hover
+						background: #DE5E60
+						color: #fff
+					@media screen and (max-width: 764px)
+						width: 100%	
+
+			.details
+				flex-basis: 24%
+				.details__tel ,
+				.details__email
+					color: #fff
+					font-weight: bold
+					display: block
+					margin: 10px 0
+					text-decoration: none
+
+				@media screen and (max-width: 764px)
+					&
+						text-align: center
+				span
+					@extend .d-b			
+
+
+
+// @keyframes pike
+// 	0%
+// 		background-color: #26292E
+
+// 	100%
+// 		background-color: #DE5E60	
