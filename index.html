@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>SashaPawlow</title>
-  <link rel="shortcut icon" href="https://icons8.com/icon/117218/kmplayer">
+  <meta charset="UTF-8">
+  <title>SashaPawlow</title>
+  <link rel="shortcut icon" href="https://img.icons8.com/wired/64/000000/p.png">
   <link rel="stylesheet" href="src/css/fontello.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
   <link rel="stylesheet" href="src/css/style.css">
@@ -31,14 +31,22 @@
                
         </article>
         <article class="slide" style="background-image: url('src/img/main-bg.jpg')">
-         
+          <div class="slide__overlay wow bounceInUp"  data-wow-delay=".3s">
+             <h1 class="a-fadeName">Hello!<br>
+                I'm Sasha.<br>
+             I'm front-end developer <br>
+            Welcome to my site :)</h1>
+            </div>
         </article>
-          <article class="slide" style="background-image: url('src/img/main.jpg')">
-        
+          <article class="slide" style="background-image: url('src/img/main-bg-3.jpg')">
+             <div class="slide__overlay wow bounceInUp"  data-wow-delay=".3s">
+               <h1 class="a-fadeName">Hello!<br>
+                I'm Sasha.<br>
+             I'm front-end developer <br>
+              Welcome to my site :)</h1>
+            </div>
         </article>
-        <article class="slide" style="background-image: url('src/img/main-bg.jpg')">
-         
-        </article>
+       
         <div class="slider__navigation">
           <div class="slider__btn">
               <div class="btn__next fl-c">
@@ -56,7 +64,7 @@
             <li class="slider-bullet active"></li>
             <li class="slider-bullet"></li>
             <li class="slider-bullet"></li>
-            <li class="slider-bullet"></li>
+           
           </ul>
           <div class="transition__btn fl-c">
             <i class="icon-down-open d-b">
@@ -97,16 +105,16 @@
         <nav class="header__nav-mobile">
         	<ul class="menu__items-mobile">
         		<li class="menu__item-mobile">
-        			<a href="#">Home</a>
+        			<a href="#" id="mob1">Home</a>
         		</li>
         		<li class="menu__item-mobile">
-        			<a href="#">Our Work</a>
+        			<a href="#" id="mob2">Our Work</a>
         		</li>
         		<li class="menu__item-mobile">
-        			<a href="#">About Us</a>
+        			<a href="#" id="mob3">About Us</a>
         		</li>
         		<li class="menu__item-mobile">
-        			<a href="#">Contact</a>
+        			<a href="#" id="mob4">Contact</a>
         		</li>
         	</ul>
         </nav>
@@ -172,13 +180,13 @@
           <div class="contact wow bounceInLeft">
               <form action="" id="form">
                 <p class="contact__name">
-                    <input class="contact__input"  name="name" type="text" placeholder="Full Name" required disabled="disabled">
+                    <input class="contact__input"  name="name" type="text" placeholder="Full Name" required >
                 </p>
                 <p class="contact__email">
-                  <input class="contact__input" type="text" disabled="disabled" placeholder="Email Address"  name="phone" required>
+                  <input class="contact__input" type="text"  placeholder="Email Address"  name="phone" required>
                 </p>
                 <p class="contact__message">
-                  <textarea class="contact__message__input" placeholder="Your Message" disabled="disabled" required rows="15" cols="40"></textarea>
+                  <textarea class="contact__message__input" placeholder="Your Message" required rows="15" cols="40"></textarea>
                 </p>
                 <button class="contact__button">
                   Send Your Email
@@ -201,8 +209,10 @@
          
       </div>
     </section>
+<button class="icon-up-open up-button"></button>   
+</main> 
 
-</main>    
+
 
 
 <!-- <script src="src/js/jquery.min.js"></script>

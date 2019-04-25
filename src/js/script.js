@@ -111,6 +111,12 @@ function scrollActive()
 /*      положение  скрола относительно пункта Контакты  */
   if ( scro > scr5 ) { $('#m5').addClass('active__item');}
      else $('#m5').removeClass('active__item');
+
+
+   if(scro > scr2)
+   		$(".up-button").fadeIn();
+   	else
+   		$(".up-button").fadeOut();	  
     };
 
 scrollTop('.transition__btn','.header');
@@ -131,13 +137,25 @@ $(window).scroll(function()
 	 
 	
 })
-	 scrollTop('#m1','.slider');
+
+
+
+scrollTop('#m1' , '.slider');
+
+scrollTop('#mob1' , '.slider');
 	
-scrollTop('#m2','.portfolio-section');
+scrollTop('#m2' , '.portfolio-section');
+
+scrollTop('#mob2' , '.portfolio-section');
 	
-scrollTop('#m3','.biography');
+scrollTop('#m3' , '.biography');
+
+scrollTop('#mob3' , '.biography');
 	
-scrollTop('#m4','.contact-page');
+scrollTop('#m4' , '.contact-page');
+scrollTop('#mob4' , '.contact-page');
+
+scrollTop('.up-button' , '.slider');
 
 	 // if($('.header').offset().top > 800)
 	 // 	$(".item__link[data-link='3']").addClass("active__item");
@@ -177,5 +195,9 @@ $('.header__burger-menu').on('click',function()
 })
 
 
+$(".contact__button").on("click" , function()
+{
+	alert("Not working at the moment");
+})
 
 })
