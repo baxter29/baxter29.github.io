@@ -371,12 +371,12 @@ main {
       align-items: center;
       margin: 0 auto; }
       main .portfolio-section .container .portfolio__items .portfolio__item {
-        max-width: 220px;
-        width: 24%;
-        height: 155px;
+        max-width: 420px;
+        width: 29%;
+        height: 455px;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: left center;
+        background-position: left top;
         position: relative;
         margin-bottom: 35px;
         -ms-flex-wrap: wrap;
@@ -387,31 +387,33 @@ main {
         @media screen and (max-width: 764px) {
           main .portfolio-section .container .portfolio__items .portfolio__item {
             width: 75%;
-            height: 238px;
+            max-width: 420px;
             max-width: 75%;
             background-size: 100%;
-            background-position: center;
+            background-position: top;
             -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-            margin: 20px auto;
-            border: 1px solid #fff; } }
+            margin: 20px auto; } }
         main .portfolio-section .container .portfolio__items .portfolio__item:hover {
           -webkit-transform: scale(1.1);
           transform: scale(1.1); }
           main .portfolio-section .container .portfolio__items .portfolio__item:hover .portfolio__item-hidden-link {
-            bottom: 0; }
+            top: 0; }
         main .portfolio-section .container .portfolio__items .portfolio__item .portfolio__item-hidden-link {
           background: rgba(0, 0, 0, 0.3);
           color: #fff !important;
           position: absolute;
-          bottom: -50px;
+          top: -538px;
           left: 0;
           right: 0;
           z-index: 5;
           text-align: center;
           -webkit-transition: .3s;
           transition: .3s;
-          padding: 5px 5px; }
+          padding: 215px 5px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          font-size: 20px; }
         main .portfolio-section .container .portfolio__items .portfolio__item .overlay-item {
           display: block;
           position: absolute;
