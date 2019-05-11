@@ -13,81 +13,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
-
-</head>
 <style>
-  .loaderArea {
-  background: linear-gradient(90deg, #FF4E50 10%, #F9D423 90%);
-  overflow: hidden;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right:0;
-  bottom:0;
-  z-index: 100000;
-}
+  @media screen and (max-width: 800px) {
+    .wow{
+        animation-name: none !important;
+        visibility: visible !important;
+    }
 
-.loader {
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  left: 50%;
-  margin-left: -20px;
-  top: 50%;
-  margin-top: -20px;
-}
- 
-.loader:before,
-.loader:after {
-  content: "";
-  height: 40px;
-  width: 40px;
-  border: 8px solid rgba(255,255,255,.5);
-  border-radius: 10px;
-  position: absolute;
-  top: 0;
-}
- 
-.loader:before {
-  animation: animate 2s infinite linear;
-}
- 
-@keyframes animate {
-  0% {
-    transform: rotate(0) skew(0);
-  }
-   
-  100% {
-    transform: rotate(180deg) skew(360deg);
-  }
-}
- 
- 
-.loader:after {
-  animation: animate2 2s infinite linear;
-}
- 
-@keyframes animate2 {
-  0% {
-    transform: rotate(0) skew(0);
-  }
-   
-  100% {
-    transform: rotate(-180deg) skew(-360deg);
-  }
-}
-
-.loaderArea {
-  background: linear-gradient(90deg, #FF4E50 10%, #F9D423 90%);
-  overflow: hidden;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right:0;
-  bottom:0;
-  z-index: 100000;
+    
 }
 </style>
+</head>
+
 <body>
  <div class="loaderArea">
    <div class="loader"></div>
@@ -155,7 +92,7 @@
     <header class="header">
         <div class="container">
           <a href="#" class="logo">
-            <img src="" alt="PAWLOW">
+            PAWLOW
           </a>
           
             <nav class="header__nav">
@@ -173,7 +110,7 @@
                   <a href="#" class="item__link" data-link="3" id="m4">Contact</a>
                 </li>
               </ul>
-              <div class="header__burger-menu">
+              <div class="header__burger-menu" id="nav-icon1">
               		<span></span>
               		<span></span>
               		<span></span>
@@ -322,6 +259,11 @@
 </script>
 <script src="src/js/common.js"></script>
 <script>
+
+wow = new WOW({
+  mobile: false
+})
+
 	new WOW().init();
 </script>
 <script>

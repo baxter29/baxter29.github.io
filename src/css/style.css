@@ -395,25 +395,25 @@ main {
             flex-wrap: wrap;
             margin: 20px auto; } }
         main .portfolio-section .container .portfolio__items .portfolio__item:hover {
-          -webkit-transform: scale(1.1);
-          transform: scale(1.1); }
+          -webkit-box-shadow: 0 0 25px #fff;
+          box-shadow: 0 0 25px #fff; }
           main .portfolio-section .container .portfolio__items .portfolio__item:hover .portfolio__item-hidden-link {
-            top: 0; }
+            bottom: 0; }
         main .portfolio-section .container .portfolio__items .portfolio__item .portfolio__item-hidden-link {
-          background: rgba(0, 0, 0, 0.3);
+          background: rgba(0, 0, 0, 0.9);
           color: #fff !important;
           position: absolute;
-          top: -538px;
+          bottom: -538px;
           left: 0;
           right: 0;
           z-index: 5;
           text-align: center;
           -webkit-transition: .3s;
           transition: .3s;
-          padding: 215px 5px;
+          padding: 15px 5px;
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
-          font-size: 20px; }
+          font-size: 16px; }
         main .portfolio-section .container .portfolio__items .portfolio__item .overlay-item {
           display: block;
           position: absolute;
