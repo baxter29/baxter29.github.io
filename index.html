@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="src/css/preloader.css">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
@@ -37,56 +37,21 @@
     <section class="slider">
       <div class="slides">
         <article class="slide" style="background-image: url('src/img/main.jpg')">
-        	<div class="slide__overlay wow bounceInUp"  data-wow-delay="1s">
-        		 <h1 class="a-fadeName">Hello!<br>
+        	<div class="slide__overlay">
+        		<!--  <h1 class="a-fadeName">Hello!<br>
                 I'm Sasha.<br>
              I'm front-end developer <br>
-        Welcome to my site :)</h1>
+        Welcome to my site :)</h1> -->
+        <h1 class="a-fadeName element"></h1>
+     
+           <div class="transition__btn fl-c">
+            
+              <i class="fas fa-angle-double-down  d-b"></i>
+            </div>    
         	</div>
-               
-        </article>
-        <article class="slide" style="background-image: url('src/img/main-bg.jpg')">
-          <div class="slide__overlay wow bounceInUp"  data-wow-delay=".3s">
-             <h1 class="a-fadeName">Hello!<br>
-                I'm Sasha.<br>
-             I'm front-end developer <br>
-            Welcome to my site :)</h1>
-            </div>
-        </article>
-          <article class="slide" style="background-image: url('src/img/main-bg-3.jpg')">
-             <div class="slide__overlay wow bounceInUp"  data-wow-delay=".3s">
-               <h1 class="a-fadeName">Hello!<br>
-                I'm Sasha.<br>
-             I'm front-end developer <br>
-              Welcome to my site :)</h1>
-            </div>
+          
         </article>
        
-        <div class="slider__navigation">
-          <div class="slider__btn">
-              <div class="btn__next fl-c">
-                  <i class="icon-left-open d-b">
-                    
-                  </i>
-              </div>
-              <div class="btn__prev fl-c">
-                 <i class="icon-right-open d-b">
-                    
-                  </i>
-              </div>
-          </div>
-          <ul class="slider-bullets">
-            <li class="slider-bullet active"></li>
-            <li class="slider-bullet"></li>
-            <li class="slider-bullet"></li>
-           
-          </ul>
-          <div class="transition__btn fl-c">
-            <i class="icon-down-open d-b">
-              
-            </i>
-          </div>
-        </div>
       </div>
     </section>
     <header class="header">
@@ -161,35 +126,36 @@
                     </a>
                     <a href="https://jazz-vibes.com/" class="portfolio__item-hidden-link">https://jazz-vibes.com/</a>
                 </div>
-                  <div class="portfolio__item wow zoomIn" data-wow-delay="1.1s" style="background-image: url('./src/img/Projeckt-5_1_.png')">
+                <button class="more_btn">Show more</button>
+                  <div class="portfolio__item wow zoomIn hidden-portfolio" data-wow-delay="1.1s" style="background-image: url('./src/img/Projeckt-5_1_.png')">
 
                     <a href="https://davedenemark.com/" class="overlay-item">
                       
                     </a>
                     <a href="https://davedenemark.com/" class="portfolio__item-hidden-link">https://davedenemark.com/</a>
                 </div>
-                  <div class="portfolio__item wow zoomIn" data-wow-delay="1.1s" style="background-image: url('./src/img/Sch.png')">
+                  <div class="portfolio__item wow zoomIn  hidden-portfolio" data-wow-delay="1.1s" style="background-image: url('./src/img/Sch.png')">
 
                     <a href="https://dutchdesign-boot.com/" class="overlay-item">
                       
                     </a>
                     <a href="https://dutchdesign-boot.com/" class="portfolio__item-hidden-link">  https://dutchdesign-boot.com/</a>
                 </div>
-                  <div class="portfolio__item wow zoomIn" data-wow-delay="1.1s" style="background-image: url('./src/img/modernf.png')">
+                  <div class="portfolio__item wow zoomIn  hidden-portfolio" data-wow-delay="1.1s" style="background-image: url('./src/img/modernf.png')">
 
                     <a href="https://modernfurniturestyle.com/kreditkarten-fur-einkaufe/" class="overlay-item">
                       
                     </a>
                     <a href="https://modernfurniturestyle.com/kreditkarten-fur-einkaufe/" class="portfolio__item-hidden-link">  https://modernfurniturestyle.com</a>
                 </div>
-                 <div class="portfolio__item wow zoomIn" data-wow-delay="1.1s" style="background-image: url('./src/img/main-page.png')">
+                 <div class="portfolio__item wow zoomIn  hidden-portfolio"  data-wow-delay="1.1s" style="background-image: url('./src/img/main-page.png')">
 
                     <a href="https://heimdallrsolutions.com/" class="overlay-item">
                       
                     </a>
                     <a href="https://heimdallrsolutions.com/" class="portfolio__item-hidden-link">https://heimdallrsolutions.com</a>
                 </div>
-          
+            
           
 
                
@@ -257,7 +223,10 @@
 <script src="src/js/wow.min.js"></script> -->
 <script src="src/js/script.js">	
 </script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script src="src/js/common.js"></script>
+
+
 <script>
 
 wow = new WOW({
@@ -273,5 +242,18 @@ wow = new WOW({
     $loader.fadeOut();
     $preloader.delay(350).fadeOut('slow');
   });
+
+
+var typed = new Typed(".element", {
+  strings: ["руддщ",
+          "Hello!<br> I'm Sasha.<br> I'm front-end developer <br>Welcome to my site :)"
+  ] ,
+  typeSpeed: 40
+});
 </script>
 </html>
+
+
+              
+           
+      

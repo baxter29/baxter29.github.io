@@ -200,4 +200,20 @@ $(".contact__button").on("click" , function()
 	alert("Not working at the moment");
 })
 
+portfolio_switch = 0;
+
+$(".more_btn").on("click",function () {
+	if(portfolio_switch == 0) {
+	
+			$(".hidden-portfolio").slideDown();
+			portfolio_switch = 1;
+			$(this).css({'display': 'none'});
+	}
+	else {
+		$(".hidden-portfolio").slideUp();
+			portfolio_switch = 0;
+	}
+
+})
+
 })

@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Tangerine')
 $txt_up : uppercase
+
+
 input, button, select, textarea
     font-weight: 300
     font-family: 'Titillium Web', sans-serif
@@ -31,12 +34,8 @@ input, button, select, textarea
 	align-items: center
 	justify-content: center
 
-.icon-right-open ,
-.icon-left-open ,
-.icon-down-open
-	font-size: 21px
-	color: #fff
-	font-weight: bold	
+
+
 
 *
 	margin: 0
@@ -55,9 +54,10 @@ h1, h2, h3, h4, h5, h6
 
     margin: 0 0 20px 0
     color: #FFFFFF
-    font-weight: 300
+    font-weight: 500
     font-family: 'Titillium Web', sans-serif;
     line-height: 1.5em
+    
 
 
 
@@ -79,7 +79,7 @@ body, html
 	color: #7F8289
 	font-weight: 300
 	font-size: 16px
-	font-family: 'Titillium Web', sans-serif;
+	font-family: 'Titillium Web', sans-serif
 	line-height: 28px
 	height: 100%
 	background: #2F3238
@@ -96,55 +96,11 @@ main
 			width: inherit
 			height: inherit
 			position: relative
-			.slider__navigation
-				position: absolute
-				z-index: 100
-				bottom: 0
-				left: 0
-				right: 0
-				background: #2F3238
-				display: flex
-				justify-content: space-between
-				align-items: center
-				.transition__btn
-					width: 50px
-					height: 50px
-					background-color: #26292E
-					cursor: pointer
-					transition: .3s
-					&:hover
-						background: #DE5E60
-				.slider__btn
-					display: flex
-					.btn__next , 
-					.btn__prev
-						width: 50px
-						height: 50px
-						background-color: #26292E
-						margin: 0 3px 0 0
-						cursor: pointer
-						transition: .3s
-						
-						&:hover
-							background: #DE5E60
-					.btn__prev
-						animation: pike  1s infinite ease-in-out	
-				.slider-bullets
-					text-align: center	
-					.slider-bullet
-						display: inline-block
-						width: 12px
-						height: 12px
-						background-color: #6E7074
-						border-radius: 50%
-						margin: 0 3px
-						cursor: pointer
-						transition: .3s
-						&.active
-							background-color: #DE5E60
-						&:hover
-							background: #fff	
-
+			
+				
+				
+				
+				
 			.slide
 				width: inherit
 				height: inherit
@@ -159,6 +115,8 @@ main
 				justify-content: center
 				align-items: center
 				
+					
+						
 				.slide__overlay
 					text-align: center
 					font-size: 40px
@@ -174,12 +132,39 @@ main
 					display: flex
 					justify-content: center
 					align-items: center
+					flex-direction: column
+					z-index: 99
+					flex-direction: column
+					
+				
+					.transition__btn
+						width: 100%
+						position: relative
+						display: block
+						animation: btn_down 1s ease infinite
+						width: 50px
+						height: 50px
+						cursor: pointer
+						transition: .3s
+						.fa-angle-double-down
+							font-size: 35px
+							color: #fff
+							font-weight: bold
+							cursor: pointer
+							text-align: center	
+							animation: txt_light 1s ease infinite
+
 					
 
 					.a-fadeName
+						-webkit-text-stroke: 1px #444
+						text-shadow: 0 0 3px #fff
 						@media screen and (max-width: 764px)
-							font-size: 28px
+							font-size: 2.3rem
 							padding: 0 5px
+						@media screen and (max-width: 395px)
+							font-size: 1.9rem
+							padding: 0 5px	
 
 				
 
@@ -292,7 +277,12 @@ main
 				padding: 15px 0
 				margin-left: 20px
 				color: #fff
+				font-family: 'Tangerine', cursive
+				font-size: 25px
 				text-decoration: none
+				font-weight: bold
+			    
+				
 			.header__nav
 				.header__burger-menu
 					display: none
@@ -368,7 +358,34 @@ main
 				flex-wrap: wrap
 				align-items: center
 				margin: 0 auto
+				flex-direction: row
+				@media screen and (max-width: 764px)
+					flex-direction: column
 				
+				
+				.more_btn
+					display: none
+					@media screen and (max-width: 764px)
+						display: block
+						background: #3C3F45
+						border: none
+						color: #23262C
+						cursor: pointer
+						display: inline-block
+						font-size: 18px
+						font-weight: 500
+						padding: 16px 40px
+						text-align: center
+						vertical-align: middle
+						width: auto
+						margin-top: 30px
+						transition: background 0.1s linear 0s, color 0.1s linear 0s
+						border-radius: 3px
+						&:hover
+							background: #DE5E60
+						color: #fff
+					
+
 				.portfolio__item
 					max-width: 420px
 					width: 29%
@@ -377,10 +394,10 @@ main
 					background-size: cover
 					background-position: left top
 					position: relative
-					margin-bottom: 35px
 					flex-wrap: wrap
 					transition: .3s
 					overflow: hidden
+					margin: 25px 15px
 					@media screen and (max-width: 764px)
 						width: 75%
 						max-width: 420px
@@ -389,6 +406,7 @@ main
 						background-position: top
 						flex-wrap: wrap
 						margin: 20px auto
+						display: block
 						
 
 					&:hover
@@ -397,7 +415,10 @@ main
 							bottom: 0
 
 
-						
+					.hidden-portfolio
+						@media screen and (max-width: 764px)
+							display: none
+
 					.portfolio__item-hidden-link
 						@extend .d-b
 						background: rgba(0,0,0,.9)
@@ -544,3 +565,21 @@ main
 	
 	&:hover
 		background: #DE5E60
+
+
+
+@keyframes btn_down 
+	0%
+		top: 75px
+	50%
+		top: 65px
+	100%
+		top: 75px
+
+@keyframes txt_light
+	0%
+		text-shadow: 0 0 3px #fff
+	50%
+		text-shadow: 0 0 9px #fff
+	100%
+		text-shadow: 0 0 3px #fff		
