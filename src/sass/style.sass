@@ -341,9 +341,7 @@ main
 
 	.portfolio-section
 		padding: 100px 0
-		.container
-			
-			
+		.container	
 			.portfolio__title
 				text-align: center
 				font-size: 48px
@@ -364,29 +362,6 @@ main
 					flex-direction: column
 				
 				
-				.more_btn
-					display: none
-					@media screen and (max-width: 764px)
-						display: block
-						background: #3C3F45
-						border: none
-						color: #23262C
-						cursor: pointer
-						display: inline-block
-						font-size: 18px
-						font-weight: 500
-						padding: 16px 40px
-						text-align: center
-						vertical-align: middle
-						width: auto
-						margin-top: 30px
-						transition: background 0.1s linear 0s, color 0.1s linear 0s
-						border-radius: 3px
-						&:hover
-							background: #DE5E60
-						color: #fff
-					
-
 				.portfolio__item
 					max-width: 420px
 					width: 29%
@@ -414,6 +389,7 @@ main
 						box-shadow: 0 0 25px #fff
 						.portfolio__item-hidden-link
 							bottom: 0
+
 
 
 					.hidden-portfolio
@@ -547,3 +523,22 @@ main
    font-weight: bold
    & span
       color: #fff
+
+
+.show_more 
+    display: none
+    background: #26292E
+    border: none
+    color: #fff
+    cursor: pointer
+    font-size: 16px
+    font-weight: 500
+    margin-top: 30px
+    transition: 1s
+    border-radius: 3px
+    padding: 16px 40px
+    font-weight: bold
+    &:hover
+    	background: #DE5E60
+    	color: #fff
+  

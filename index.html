@@ -210,7 +210,7 @@
                            </div>
                         </div>
                      </div>
-                     <a href="#" class="btn loadMore">Load More</a>
+                    
                   </div>
                </div>
       </div>
@@ -271,12 +271,8 @@
                     </a>
                     <a href="https://heimdallrsolutions.com/" class="portfolio__item-hidden-link">https://heimdallrsolutions.com</a>
                 </div>
-         
-           
-          
-
-               
-                    
+               <button class="show_more">Show more</button>
+        
             </div>
         </div>
        
@@ -320,6 +316,27 @@ var typed = new Typed(".element", {
   ] ,
   typeSpeed: 40,
   showCursor: false,
+});
+
+$(window).resize(function() {
+  if(document.documentElement.clientWidth < 764) {
+    //this will execute on page load(to be more specific when document ready event occurs)
+if ($('.portfolio__item').length > 3) {
+  $('.portfolio__item:gt(2)').hide();
+  $('.show_more').show();
+}
+
+$('.show_more').on('click', function() {
+  //toggle elements with class .ty-compact-list that their index is bigger than 2
+  $('.portfolio__item:gt(2)').toggle();
+  //change text of show more element just for demonstration purposes to this demo
+  $(this).text() === 'Show more' ? $(this).text('Show less') : $(this).text('Show more');
+});
+  }
+  else {
+     $('.portfolio__item:gt(2)').show();
+     $('.show_more').hide();
+  }
 });
 
 
