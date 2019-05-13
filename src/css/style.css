@@ -4,12 +4,12 @@ input, button, select, textarea {
   font-family: 'Titillium Web', sans-serif;
   outline: 0; }
 
-.d-f, main .slider .slides .slide .slide__txt .slide__rect-txt, main .header .container, main .header .container .header__nav .menu__items, main .portfolio-section .container .portfolio__items, main .contact-page .container {
+.d-f, main .slider .slides .slide .slide__txt .slide__rect-txt, main .header .container, main .header .container .header__nav .menu__items, main .portfolio-section .container .portfolio__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
-.d-b, main .slider .slides .slide .slide__txt .slide__rect-txt span, main .header .container .logo, main .header .container .header__nav .header__burger-menu span, main .portfolio-section .container .portfolio__items .portfolio__item .portfolio__item-hidden-link, main .contact-page .container .details span {
+.d-b, main .slider .slides .slide .slide__txt .slide__rect-txt span, main .header .container .logo, main .header .container .header__nav .header__burger-menu span, main .portfolio-section .container .portfolio__items .portfolio__item .portfolio__item-hidden-link {
   display: block; }
 
 .wrap {
@@ -450,85 +450,6 @@ main {
       width: 90%;
       margin: 15px auto;
       padding: 15px 0; }
-  main .contact-page {
-    background: #2F3238;
-    margin: 50px 15px; }
-    main .contact-page .container {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between; }
-      @media screen and (max-width: 764px) {
-        main .contact-page .container {
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column; }
-        main .contact-page .container .contact {
-          margin-bottom: 25px; } }
-      main .contact-page .container .contact {
-        -ms-flex-preferred-size: 70%;
-        flex-basis: 70%; }
-        main .contact-page .container .contact .contact__name .contact__input,
-        main .contact-page .container .contact .contact__name .contact__message__input,
-        main .contact-page .container .contact .contact__email .contact__input,
-        main .contact-page .container .contact .contact__email .contact__message__input,
-        main .contact-page .container .contact .contact__message .contact__input,
-        main .contact-page .container .contact .contact__message .contact__message__input {
-          width: 95%;
-          border: none;
-          border-radius: 0;
-          -webkit-box-shadow: none;
-          box-shadow: none;
-          background: #26292E;
-          color: #fff;
-          font-size: 16px;
-          height: auto;
-          padding: 15px;
-          margin: 0;
-          resize: none; }
-        main .contact-page .container .contact .contact__email > .contact__input {
-          margin: 2px 0; }
-        main .contact-page .container .contact .contact__message__input {
-          color: #fff; }
-        main .contact-page .container .contact .contact__button {
-          background: #3C3F45;
-          border: none;
-          color: #23262C;
-          cursor: pointer;
-          display: inline-block;
-          font-size: 18px;
-          font-weight: 500;
-          padding: 16px 40px;
-          text-align: center;
-          vertical-align: middle;
-          width: auto;
-          margin-top: 30px;
-          -webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;
-          transition: background 0.1s linear 0s, color 0.1s linear 0s;
-          border-radius: 3px; }
-          main .contact-page .container .contact .contact__button:hover {
-            background: #DE5E60;
-            color: #fff; }
-          @media screen and (max-width: 764px) {
-            main .contact-page .container .contact .contact__button {
-              width: 100%; } }
-      main .contact-page .container .details {
-        -ms-flex-preferred-size: 24%;
-        flex-basis: 24%; }
-        main .contact-page .container .details .details__tel,
-        main .contact-page .container .details .details__email {
-          color: #fff;
-          font-weight: bold;
-          display: block;
-          margin: 10px 0;
-          text-decoration: none; }
-        @media screen and (max-width: 764px) {
-          main .contact-page .container .details {
-            text-align: center; } }
 
 .up-button {
   width: 50px;
@@ -580,3 +501,52 @@ main {
     text-shadow: 0 0 9px #fff; }
   100% {
     text-shadow: 0 0 3px #fff; } }
+
+.bar-con {
+  background-color: transparent;
+  height: 25px;
+  border: 2px solid #000; }
+
+.bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 0%; }
+
+.html .bar,
+.css .bar,
+.sass .bar,
+.wordpress .bar,
+.photoshop .bar,
+.jQuery .bar,
+.avocode .bar,
+.javascript .bar,
+.php .bar,
+.gulp .bar,
+.vuejs .bar {
+  background: #fff;
+  -webkit-transition: 3s ease;
+  transition: 3s ease; }
+
+.skills-block {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-preferred-size: 90%;
+  flex-basis: 90%; }
+
+.skills-content {
+  margin-bottom: 30px; }
+
+.block-title {
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: bold; }
+  .block-title span {
+    color: #fff; }

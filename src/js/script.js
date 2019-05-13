@@ -13,7 +13,7 @@ $(document).ready(function()
 
 	let biography = $('.biography').offset().top;
 
-	let contact = $('.contact-page').offset().top;
+	
 
 	let link_home =  $(".item__link[data-link='0']");
 
@@ -205,15 +205,48 @@ portfolio_switch = 0;
 $(".more_btn").on("click",function () {
 	if(portfolio_switch == 0) {
 	
-			$(".hidden-portfolio").slideDown();
+			$(".hidden-portfolios").slideDown();
 			portfolio_switch = 1;
-			$(this).css({'display': 'none'});
+
 	}
 	else {
-		$(".hidden-portfolio").slideUp();
+		$(".hidden-portfolios").slideUp();
 			portfolio_switch = 0;
 	}
 
 })
+
+/// Прогресc скилов 
+$(window).on('scroll', function(){
+  let sc = $(window).scrollTop();
+      sc1 = 1300;
+      sc2 = 2100;
+  if( $(window).scrollTop() >= 800){
+    (function ( $ ) {
+      $.fn.progress = function() {
+        var percent = this.data("percent");
+        this.css("width", percent+"%");
+      };
+    }
+    ($));
+    
+      $(".html .bar").progress();
+       $(".css .bar").progress();
+      $(".sass .bar").progress();
+      $(".wordpress .bar").progress();
+      $(".photoshop .bar").progress();
+      $(".jQuery .bar").progress();
+      $(".javascript .bar").progress();
+      $(".php .bar").progress();
+      $(".avocode .bar").progress();
+      $(".gulp .bar").progress();
+       $(".vuejs .bar").progress();
+
+     
+    
+    
+  }
+  
+});
 
 })

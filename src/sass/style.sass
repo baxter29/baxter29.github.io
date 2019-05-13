@@ -343,6 +343,7 @@ main
 		padding: 100px 0
 		.container
 			
+			
 			.portfolio__title
 				text-align: center
 				font-size: 48px
@@ -468,84 +469,7 @@ main
 			padding: 15px 0		
 							
 	
-	.contact-page
-		background: #2F3238
-		margin: 50px 15px
-		.container
-			@extend .d-f
-			flex-direction: row
-			justify-content: space-between
-			@media screen and (max-width: 764px)
-				&
-					flex-direction: column
-
-				.contact
-					margin-bottom: 25px	
-
-			.contact
-
-				flex-basis: 70%
-				.contact__name ,
-				.contact__email ,
-				.contact__message
-
-					.contact__input, 
-					.contact__message__input
-						width: 95%
-						border: none
-						border-radius: 0
-						box-shadow: none
-						background: #26292E
-						color: #fff
-						font-size: 16px
-						height: auto
-						padding: 15px
-						margin: 0
-						resize: none
-
-				.contact__email > .contact__input
-					margin: 2px 0
-		
-				.contact__message__input
-					color: #fff
-					
-				.contact__button
-					background: #3C3F45
-					border: none
-					color: #23262C
-					cursor: pointer
-					display: inline-block
-					font-size: 18px
-					font-weight: 500
-					padding: 16px 40px
-					text-align: center
-					vertical-align: middle
-					width: auto
-					margin-top: 30px
-					transition: background 0.1s linear 0s, color 0.1s linear 0s
-					border-radius: 3px
-					&:hover
-						background: #DE5E60
-						color: #fff
-					@media screen and (max-width: 764px)
-						width: 100%	
-
-			.details
-				flex-basis: 24%
-				.details__tel ,
-				.details__email
-					color: #fff
-					font-weight: bold
-					display: block
-					margin: 10px 0
-					text-decoration: none
-
-				@media screen and (max-width: 764px)
-					&
-						text-align: center
-				span
-					@extend .d-b			
-
+	
 
 .up-button
 	width: 50px
@@ -583,3 +507,43 @@ main
 		text-shadow: 0 0 9px #fff
 	100%
 		text-shadow: 0 0 3px #fff		
+
+
+.bar-con
+   background-color: transparent
+   height: 25px
+   border: 2px solid #000
+
+.bar
+   display: flex
+   height: 100%
+   width: 0%
+
+.html .bar,
+.css .bar,
+.sass .bar,
+.wordpress .bar,
+.photoshop .bar,
+.jQuery .bar,
+.avocode .bar,
+.javascript .bar,
+.php .bar ,
+.gulp .bar,
+.vuejs .bar	
+
+   background: #fff
+   
+   transition: 3s ease
+.skills-block
+   padding: 10px
+   display: flex
+   flex-direction: column
+   flex-basis: 90%
+.skills-content
+   margin-bottom: 30px
+.block-title
+   margin-bottom: 10px
+   color: #fff
+   font-weight: bold
+   & span
+      color: #fff
