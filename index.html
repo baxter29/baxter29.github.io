@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SashaPawlow</title>
+  <title>Front-End Development</title>
   <link rel="shortcut icon" href="https://img.icons8.com/wired/64/000000/p.png">
   <link rel="stylesheet" href="src/css/fontello.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
@@ -166,7 +166,7 @@
                               Adobe Photoshop <span> : 50%</span>
                            </div>
                            <div class="photoshop bar-con">
-                              <div class="bar" data-percent="50">50%</div>
+                              <div class="bar" data-percent="50"></div>
                            </div>
                         </div>
                         <div class="skills-content">
@@ -209,6 +209,7 @@
                               <div class="bar" data-percent="15"></div>
                            </div>
                         </div>
+                        <button class="show_skills">Show more</button>
                      </div>
                     
                   </div>
@@ -281,6 +282,13 @@
    
 <button class="icon-up-open up-button"></button>   
 </main> 
+<footer class="footer">
+  <div class="container">
+      <a href="#" class="logo">PAWLOW</a>
+      
+  </div>
+</footer>
+
 
 
 
@@ -338,6 +346,33 @@ $('.show_more').on('click', function() {
      $('.show_more').hide();
   }
 });
+
+
+$(window).resize(function() {
+  if(document.documentElement.clientWidth < 764) {
+    //this will execute on page load(to be more specific when document ready event occurs)
+if ($('.skills-content').length > 3) {
+  $('.skills-content:gt(2)').hide();
+  $('.show_skills').show();
+}
+
+$('.show_skills').on('click', function() {
+  //toggle elements with class .ty-compact-list that their index is bigger than 2
+  $('.skills-content:gt(2)').toggle();
+  //change text of show more element just for demonstration purposes to this demo
+  $(this).text() === 'Show more' ? $(this).text('Show less') : $(this).text('Show more');
+});
+  }
+  else {
+     $('.skills-content:gt(2)').show();
+     $('.show_more').hide();
+  }
+});
+
+
+
+
+
 
 
 

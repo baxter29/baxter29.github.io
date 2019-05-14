@@ -34,7 +34,15 @@ input, button, select, textarea
 	align-items: center
 	justify-content: center
 
-
+.logo
+	@extend .d-b
+	padding: 15px 0
+	margin-left: 20px
+	color: #fff
+	font-family: 'Tangerine', cursive
+	font-size: 25px
+	text-decoration: none
+	font-weight: bold
 
 
 *
@@ -272,15 +280,7 @@ main
 			@extend .d-f
 			justify-content: space-between
 			align-items: center
-			.logo
-				@extend .d-b
-				padding: 15px 0
-				margin-left: 20px
-				color: #fff
-				font-family: 'Tangerine', cursive
-				font-size: 25px
-				text-decoration: none
-				font-weight: bold
+			
 			    
 				
 			.header__nav
@@ -525,7 +525,8 @@ main
       color: #fff
 
 
-.show_more 
+.show_more ,
+.show_skills	
     display: none
     background: #26292E
     border: none
@@ -541,4 +542,12 @@ main
     &:hover
     	background: #DE5E60
     	color: #fff
+
+.show_skills
+	background: #2F3238    	
   
+
+.footer
+	background: #26292E 
+	.container
+		

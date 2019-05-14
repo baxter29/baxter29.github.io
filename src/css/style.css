@@ -9,7 +9,7 @@ input, button, select, textarea {
   display: -ms-flexbox;
   display: flex; }
 
-.d-b, main .slider .slides .slide .slide__txt .slide__rect-txt span, main .header .container .logo, main .header .container .header__nav .header__burger-menu span, main .portfolio-section .container .portfolio__items .portfolio__item .portfolio__item-hidden-link {
+.d-b, .logo, main .slider .slides .slide .slide__txt .slide__rect-txt span, main .header .container .header__nav .header__burger-menu span, main .portfolio-section .container .portfolio__items .portfolio__item .portfolio__item-hidden-link {
   display: block; }
 
 .wrap {
@@ -35,6 +35,15 @@ input, button, select, textarea {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+
+.logo {
+  padding: 15px 0;
+  margin-left: 20px;
+  color: #fff;
+  font-family: 'Tangerine', cursive;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: bold; }
 
 * {
   margin: 0;
@@ -263,14 +272,6 @@ main {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
-      main .header .container .logo {
-        padding: 15px 0;
-        margin-left: 20px;
-        color: #fff;
-        font-family: 'Tangerine', cursive;
-        font-size: 25px;
-        text-decoration: none;
-        font-weight: bold; }
       main .header .container .header__nav .header__burger-menu {
         display: none; }
         @media screen and (max-width: 764px) {
@@ -528,7 +529,8 @@ main {
   .block-title span {
     color: #fff; }
 
-.show_more {
+.show_more,
+.show_skills {
   display: none;
   background: #26292E;
   border: none;
@@ -542,6 +544,13 @@ main {
   border-radius: 3px;
   padding: 16px 40px;
   font-weight: bold; }
-  .show_more:hover {
+  .show_more:hover,
+  .show_skills:hover {
     background: #DE5E60;
     color: #fff; }
+
+.show_skills {
+  background: #2F3238; }
+
+.footer {
+  background: #26292E; }
