@@ -28,45 +28,7 @@ function scrollActive()
 		var scro= $(window).scrollTop();            
         var scr=0; 		// home
         var scr2= $(".biography").offset().top; 	// About Me
-        var scr3=$(".portfolio-section").offset().top;	// Portfolio
-        var scr4=$(".footer").offset().top;	// Contact details
-        var scr5= 3500	// начало меню контакты
-/*      положение  скрола относительно пункта Студия    */
-    if ( $(window).scrollTop() >= scr && scro <= scr2 ) {
-    	console.log($(".footer").scrollTop().top);
-    	$('#m1').addClass('active__item');}
-     else $('#m1').removeClass('active__item');
-/*      положение  скрола относительно пункта Услуги   */
-  if ( scro > scr2 && scro <= scr3 ) { 	$('#m2').addClass('active__item');}
-     else $('#m2').removeClass('active__item');
-/*      положение  скрола относительно пункта Дизайнеры   */
-    if ( scro > scr3 && scro <= scr4 ) {   	$('#m3').addClass('active__item');}
-     else $('#m3').removeClass('active__item');
 
-/*      положение  скрола относительно пункта Портфолио  */
-  if ( scro > scr4) {   	$('#m4').addClass('active__item');}
-     else $('#m4').removeClass('active__item');
-
-
-
-      if ( $(window).scrollTop() >= scr && scro <= scr2 ) {
-    	console.log($(".footer").scrollTop().top);
-    	$('#mob1').addClass('active__item');}
-     else $('#mob1').removeClass('active__item');
-/*      положение  скрола относительно пункта Услуги   */
-  if ( scro > scr2 && scro <= scr3 ) { 	$('#mob2').addClass('active__item');}
-     else $('#mob2').removeClass('active__item');
-/*      положение  скрола относительно пункта Дизайнеры   */
-    if ( scro > scr3 && scro <= scr4 ) {   	$('#mob3').addClass('active__item');}
-     else $('#mob3').removeClass('active__item');
-
-/*      положение  скрола относительно пункта Портфолио  */
-  if ( scro > scr4) {   	$('#mob4').addClass('active__item');}
-     else $('#mob4').removeClass('active__item');
-
-// /*      положение  скрола относительно пункта Контакты  */
-//   if ( scro > scr5 ) { $('#m5').addClass('active__item');}
-//      else $('#m5').removeClass('active__item');
 
 
    if(scro > scr2)
@@ -95,20 +57,23 @@ $(window).scroll(function()
 
 
 
-scrollTop('#m1' , '.slider');
 
-scrollTop('#mob1' , '.slider');
-	
-scrollTop('#m2' , '.biography');
 
-scrollTop('#mob2' , '.biography');
-	
-scrollTop('#m3' , '.portfolio-section');
 
-scrollTop('#mob3' , '.portfolio-section');
+scrollTop('.m1' , '.slider');
+
+scrollTop('.mob1' , '.slider');
 	
-scrollTop('#m4' , '.footer');
-scrollTop('#mob4' , '.footer');
+scrollTop('.m2' , '.biography');
+
+scrollTop('.mob2' , '.biography');
+	
+scrollTop('.m3' , '.portfolio-section');
+
+scrollTop('.mob3' , '.portfolio-section');
+	
+scrollTop('.m4' , '.footer');
+scrollTop('.mob4' , '.footer');
 
 scrollTop('.up-button' , '.slider');
 
@@ -138,13 +103,17 @@ $('.header__burger-menu').on('click',function()
   
 	if(burger_flag == 0)
 	{
-		$('.header__nav-mobile').slideDown();
+		$('.header__nav-mobile').slideDown().css({'box-shadow' : '0 0 5px #fff'});
 		burger_flag = 1;
+		$(".header__burger-menu span:nth-child(2n)").css({'margin': '5px 0' , 'height' : '2px'});
+		$(".header__burger-menu span").css({'box-shadow': '0 0 5px #fff'});
 	}
 	else
 	{
-		$('.header__nav-mobile').slideUp();
+		$('.header__nav-mobile').slideUp().css({'box-shadow' : '0 0 0 #fff'});
 		burger_flag = 0;
+		$(".header__burger-menu span:nth-child(2n)").css({'margin': '2px 0'  , 'height' : '3px'});
+		$(".header__burger-menu span").css({'box-shadow': '0 0 0 #fff'});
 	}
 	
 })
@@ -206,3 +175,50 @@ $(window).on('scroll', function(){
     $loader.fadeOut();
     $preloader.delay(350).fadeOut('slow');
   });
+
+
+
+
+
+
+$( document ).ready(function() { // Tells the function to wait to preform until everything on the page has loaded.
+		$(window).scroll(function() { // Says this function is preformed continuisly while scrolling.
+		    var Scroll = $(window).scrollTop() + 1, // This variable finds the distance you have scrolled from the top.
+						slider = $('#slider').offset().top, // This variable finds the distance between .section-one and the top. Replace .section-one with the ID of your section.
+						bio = $('#bio').offset().top; // This variable finds the distance between .section-two and the top. Replace .section-two with the ID of your section. You can duplicate this for as many sections as you want.
+						portfolio = $('#portfolio').offset().top;
+						footer = $('#footer').offset().top - 850;
+
+		    if (Scroll >= slider) { // If you have scrolled past section one do this.
+		        $(".m1").addClass("active__item");
+		       
+		    } 
+		    else { // If you have not scrolled section one do this.
+		        $(".m1").removeClass("active__item"); 
+		    }
+			if (Scroll >= bio) { // If you have scrolled past section two do this.You can duplicate this for as many sections as you want.
+		        $(".m2").addClass("active__item"); 
+		        $(".m1").removeClass("active__item"); 
+				
+		    } 
+		    else { // If you have not scrolled section two do this.
+		        $(".m2").removeClass("active__item");
+		    }
+		    if (Scroll >= portfolio) { // If you have scrolled past section two do this.You can duplicate this for as many sections as you want.
+		        $(".m3").addClass("active__item"); 
+		        $(".m2").removeClass("active__item");
+				
+		    } 
+		    else { // If you have not scrolled section two do this.
+		        $(".m3").removeClass("active__item");
+		    }
+		    if (Scroll >= footer) { // If you have scrolled past section two do this.You can duplicate this for as many sections as you want.
+		        $(".m4").addClass("active__item");
+		        $(".m3").removeClass("active__item"); 
+				
+		    } 
+		    else { // If you have not scrolled section two do this.
+		        $(".m4").removeClass("active__item");
+		    }
+		});
+});

@@ -22,7 +22,7 @@
 </div>
 </body>
 <main>
-    <section class="slider">
+    <section class="slider"  id="slider">
       <div class="slides">
         <article class="slide" style="background-image: url('src/img/main.jpg')">
         	<div class="slide__overlay">
@@ -51,16 +51,16 @@
             <nav class="header__nav">
               <ul class="menu__items">
                 <li class="menu__item">
-                  <a href="#" class="item__link active__item" data-link="0" id="m1" >Home</a>
+                  <a href="#" class="item__link active__item m1" data-link="0"  >Home</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#"  class="item__link" data-link="1" id="m2">About Me</a>
+                  <a href="#"  class="item__link m2" data-link="1">About Me</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#"  class="item__link" data-link="2" id="m3">Portfolio</a>
+                  <a href="#"  class="item__link m3" data-link="2">Portfolio</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="item__link" data-link="3" id="m4">Contact details</a>
+                  <a href="#" class="item__link m4" data-link="3">Contact details</a>
                 </li>
               </ul>
               <div class="header__burger-menu" id="nav-icon1">
@@ -73,21 +73,21 @@
         <nav class="header__nav-mobile">
         	<ul class="menu__items-mobile">
         		<li class="menu__item-mobile">
-        			<a href="#" id="mob1">Home</a>
+        			<a href="#"  class="m1">Home</a>
         		</li>
         		<li class="menu__item-mobile">
-        			<a href="#" id="mob2">About Me</a>
+        			<a href="#bio"  class="m2">About Me</a>
         		</li>
         		<li class="menu__item-mobile">
-        			<a href="#" id="mob3">Portfolio</a>
+        			<a href="#portfolio"  class="m3">Portfolio</a>
         		</li>
         		<li class="menu__item-mobile">
-        			<a href="#" id="mob4">Contact details</a>
+        			<a href="#footer" class="m4">Contact details</a>
         		</li>
         	</ul>
         </nav>
     </header>
-     <section class="biography" >
+     <section class="biography" id="bio">
       <div class="container text-center">
           <h2 class="biography__title ">
               About Me
@@ -208,7 +208,7 @@
                </div>
       </div>
     </section>
-    <section class="portfolio-section">
+    <section class="portfolio-section" id="portfolio">
         <div class="container">
             <h2 class="portfolio__title">My works</h2>
             <h3 class="portfolio__subtitle">Check Out Our Projects on Dribbble.</h3>
@@ -272,15 +272,15 @@
     </section>
    
    
-<button class="icon-up-open up-button"></button>   
+<button class="fas fa-angle-double-down  d-b up-button"></button>   
 </main> 
-<footer class="footer">
+<footer class="footer" id="footer">
   <div class="container">
       <a href="#" class="logo">PAWLOW</a>
       <div class="footer_contacts">
       		<div class="skype">
       			<span class="icon-skype"></span>
-      			<p>sashapawlow726</p>
+      			<a href="tel:sashapawlow726">sashapawlow726</a>
       		</div>
       		<div class="gmail">
       			<span class="icon-gmail"></span>

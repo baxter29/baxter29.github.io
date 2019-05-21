@@ -1,6 +1,5 @@
 .loaderArea {
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #FF4E50), color-stop(90%, #F9D423));
-  background: linear-gradient(90deg, #FF4E50 10%, #F9D423 90%);
+  background: #2F3238;
   overflow: hidden;
   position: fixed;
   left: 0;
@@ -65,8 +64,7 @@
     transform: rotate(-180deg) skew(-360deg); } }
 
 .loaderArea {
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #FF4E50), color-stop(90%, #F9D423));
-  background: linear-gradient(90deg, #FF4E50 10%, #F9D423 90%);
+  background: #2F3238;
   overflow: hidden;
   position: fixed;
   left: 0;
