@@ -9,7 +9,7 @@ input, button, select, textarea {
   display: -ms-flexbox;
   display: flex; }
 
-.d-b, .logo, main .slider .slides .slide .slide__txt .slide__rect-txt span, main .header .container .header__nav .header__burger-menu span, main .portfolio-section .container .portfolio__items .portfolio__item .portfolio__item-hidden-link, .footer .container .skype span {
+.d-b, .logo, main .slider .slides .slide .slide__txt .slide__rect-txt span, main .header .container .header__nav .header__burger-menu span, main .portfolio-section .container .portfolio__items .portfolio__item .portfolio__item-hidden-link, .footer .container .footer_contacts .skype span {
   display: block; }
 
 .wrap {
@@ -325,7 +325,7 @@ main {
         -webkit-transition: .3s;
         transition: .3s;
         font-weight: 700; }
-        main .header__nav-mobile .menu__items-mobile .menu__item-mobile a:hover {
+        main .header__nav-mobile .menu__items-mobile .menu__item-mobile a:hover, main .header__nav-mobile .menu__items-mobile .menu__item-mobile a.active__item {
           text-shadow: 1px 1px 15px #fff;
           color: white; }
   main .portfolio-section {
@@ -609,39 +609,59 @@ main {
     -ms-flex-align: center;
     align-items: center;
     padding: 15px 0; }
-    .footer .container .skype,
-    .footer .container .gmail,
-    .footer .container .call {
+    @media screen and (max-width: 764px) {
+      .footer .container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
+    .footer .container .footer_contacts {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      padding: 5px 0;
-      font-size: 17px;
-      font-weight: 700; }
-      .footer .container .skype:hover span,
-      .footer .container .gmail:hover span,
-      .footer .container .call:hover span {
-        text-shadow: 0 0 5px #fff; }
-    .footer .container .skype span {
-      color: #fff;
-      -webkit-transition: .3s;
-      transition: .3s; }
-    .footer .container .skype p {
-      margin-left: 10px;
-      color: #fff;
-      letter-spacing: 1.2; }
-    .footer .container .gmail a,
-    .footer .container .call a {
-      text-decoration: none;
-      color: #fff;
-      margin-left: 10px;
-      letter-spacing: 1.2; }
-    .footer .container .gmail span,
-    .footer .container .call span {
-      color: #fff; }
+      align-items: center; }
+      .footer .container .footer_contacts .skype,
+      .footer .container .footer_contacts .gmail,
+      .footer .container .footer_contacts .call {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        padding: 5px 0;
+        font-size: 17px;
+        font-weight: 700; }
+        .footer .container .footer_contacts .skype:hover span,
+        .footer .container .footer_contacts .gmail:hover span,
+        .footer .container .footer_contacts .call:hover span {
+          text-shadow: 0 0 5px #fff; }
+      .footer .container .footer_contacts .skype span {
+        color: #fff;
+        -webkit-transition: .3s;
+        transition: .3s; }
+      .footer .container .footer_contacts .skype p {
+        margin-left: 10px;
+        color: #fff;
+        letter-spacing: 1.2; }
+      .footer .container .footer_contacts .gmail a,
+      .footer .container .footer_contacts .call a {
+        text-decoration: none;
+        color: #fff;
+        margin-left: 10px;
+        letter-spacing: 1.2; }
+      .footer .container .footer_contacts .gmail span,
+      .footer .container .footer_contacts .call span {
+        color: #fff; }

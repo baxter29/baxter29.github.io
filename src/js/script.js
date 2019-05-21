@@ -1,69 +1,6 @@
 $(document).ready(function()
 {
-	// берем массив всех слайдов
-	const slide = $('.slide')
-	// массив всех 'пулек'
-	const bullets = $('.slider-bullet')
-	// тот слайд который нужно отобразить
-	let active = 0;
-
-	let header= $('.header').offset().top;
-
-	let portfolio = $('.portfolio-section').offset().top;
-
-	let biography = $('.biography').offset().top;
-
 	
-
-	let link_home =  $(".item__link[data-link='0']");
-
-	let link_portfolio = $(".item__link[data-link='1']");
-
-	let link_biography = $(".item__link[data-link='2']");
-
-	let link_contact = $(".item__link[data-link='3']");
-
-	changeSlide();
-
-  
-bullets.on("click",function(e)
-{
-	e.preventDefault();
-	active = $(this).index();
-	changeSlide();
-})  
-    
-
-    function changeSlide() 
-    {
-    	/* скрыть все слайды по умолчанию */
-		slide.fadeOut();
-    	slide.eq(active).fadeIn(); 
-    	
-    	// если слайд равен 0 = показать
-	
-		bullets.removeClass('active');
-		bullets.eq(active).addClass('active'); 
-    }
-
-
- $('.btn__prev').on('click', function(e){
-        active++;
-        if(active == slide.length) {
-            active = 0;
-        }
-        changeSlide();
-    });
-
-
- $('.btn__next').on('click', function(e){
-        if(active == 0) {
-            active = slide.length;
-        }
-        active--;
-        changeSlide();
-    });
-
 function scrollTop(clickElem , scrollElem)
 {
 	$(clickElem).on('click',function()
@@ -89,13 +26,15 @@ function fixedNav()
 function scrollActive()
 {
 		var scro= $(window).scrollTop();            
-        var scr=0; 		// начало страницы меню студия
-        var scr2=604; 	// начало меню услуги
-        var scr3=1170;	// начало меню дизайнеры
-        var scr4=1470;	// начало меню работы
-        var scr5=4073;	// начало меню контакты
+        var scr=0; 		// home
+        var scr2= $(".biography").offset().top; 	// About Me
+        var scr3=$(".portfolio-section").offset().top;	// Portfolio
+        var scr4=$(".footer").offset().top;	// Contact details
+        var scr5= 3500	// начало меню контакты
 /*      положение  скрола относительно пункта Студия    */
-    if ( $(window).scrollTop() >= scr && scro <= scr2 ) {	$('#m1').addClass('active__item');}
+    if ( $(window).scrollTop() >= scr && scro <= scr2 ) {
+    	console.log($(".footer").scrollTop().top);
+    	$('#m1').addClass('active__item');}
      else $('#m1').removeClass('active__item');
 /*      положение  скрола относительно пункта Услуги   */
   if ( scro > scr2 && scro <= scr3 ) { 	$('#m2').addClass('active__item');}
@@ -105,12 +44,29 @@ function scrollActive()
      else $('#m3').removeClass('active__item');
 
 /*      положение  скрола относительно пункта Портфолио  */
-  if ( scro > scr4 && scro <= scr5 ) {   	$('#m4').addClass('active__item');}
+  if ( scro > scr4) {   	$('#m4').addClass('active__item');}
      else $('#m4').removeClass('active__item');
 
-/*      положение  скрола относительно пункта Контакты  */
-  if ( scro > scr5 ) { $('#m5').addClass('active__item');}
-     else $('#m5').removeClass('active__item');
+
+
+      if ( $(window).scrollTop() >= scr && scro <= scr2 ) {
+    	console.log($(".footer").scrollTop().top);
+    	$('#mob1').addClass('active__item');}
+     else $('#mob1').removeClass('active__item');
+/*      положение  скрола относительно пункта Услуги   */
+  if ( scro > scr2 && scro <= scr3 ) { 	$('#mob2').addClass('active__item');}
+     else $('#mob2').removeClass('active__item');
+/*      положение  скрола относительно пункта Дизайнеры   */
+    if ( scro > scr3 && scro <= scr4 ) {   	$('#mob3').addClass('active__item');}
+     else $('#mob3').removeClass('active__item');
+
+/*      положение  скрола относительно пункта Портфолио  */
+  if ( scro > scr4) {   	$('#mob4').addClass('active__item');}
+     else $('#mob4').removeClass('active__item');
+
+// /*      положение  скрола относительно пункта Контакты  */
+//   if ( scro > scr5 ) { $('#m5').addClass('active__item');}
+//      else $('#m5').removeClass('active__item');
 
 
    if(scro > scr2)
@@ -118,12 +74,11 @@ function scrollActive()
    	else
    		$(".up-button").fadeOut();	  
     };
-
 scrollTop('.transition__btn','.header');
 
 
 $scrollDate = $('.header').offset().top;
-console.log($scrollDate + "scroll");
+
 
 $('.header').removeClass('fixed');
 $(window).scroll(function()
@@ -144,16 +99,16 @@ scrollTop('#m1' , '.slider');
 
 scrollTop('#mob1' , '.slider');
 	
-scrollTop('#m2' , '.portfolio-section');
+scrollTop('#m2' , '.biography');
 
-scrollTop('#mob2' , '.portfolio-section');
+scrollTop('#mob2' , '.biography');
 	
-scrollTop('#m3' , '.biography');
+scrollTop('#m3' , '.portfolio-section');
 
-scrollTop('#mob3' , '.biography');
+scrollTop('#mob3' , '.portfolio-section');
 	
-scrollTop('#m4' , '.contact-page');
-scrollTop('#mob4' , '.contact-page');
+scrollTop('#m4' , '.footer');
+scrollTop('#mob4' , '.footer');
 
 scrollTop('.up-button' , '.slider');
 
@@ -194,13 +149,6 @@ $('.header__burger-menu').on('click',function()
 	
 })
 
-
-$(".contact__button").on("click" , function()
-{
-	alert("Not working at the moment");
-})
-
-portfolio_switch = 0;
 
 $(".more_btn").on("click",function () {
 	if(portfolio_switch == 0) {

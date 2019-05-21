@@ -320,7 +320,6 @@ main
 						transition: .3s
 						font-weight: 700
 						&.active__item ,
-						
 						&:hover
 							text-shadow: 1px 1px 15px #fff
 							color: rgba(255,255,255,1)
@@ -344,7 +343,8 @@ main
 					text-decoration: none
 					transition: .3s
 					font-weight: 700
-					&:hover
+					&:hover ,
+					&.active__item
 						text-shadow: 1px 1px 15px #fff
 						color: rgba(255,255,255,1)
 		
@@ -589,45 +589,54 @@ main
 		justify-content: space-between
 		align-items: center
 		padding: 15px 0
-		.skype ,
-		.gmail ,
-		.call
+		@media screen and (max-width: 764px)
+			flex-direction: column
+
+
+		.footer_contacts
 			display: flex
+			flex-direction: column
+			justify-content: center
 			align-items: center
-			justify-content: flex-start
-			padding: 5px 0
-			font-size: 17px
-			font-weight: 700
-			&:hover span
-				text-shadow: 0 0 5px #fff
-			
-		.skype
-
-			
-
-			span
-				@extend .d-b
-				color: #fff
-				transition: .3s
-
-			
-		.skype
-			p
-				margin-left: 10px
-				color: #fff
-				letter-spacing: 1.2
-
-
-		.gmail ,
-		.call
-			a
-				text-decoration: none
-				color: #fff
+			.skype ,
+			.gmail ,
+			.call
+				display: flex
+				align-items: center
+				justify-content: flex-start
+				padding: 5px 0
+				font-size: 17px
+				font-weight: 700
+				&:hover span
+					text-shadow: 0 0 5px #fff
 				
-				margin-left: 10px
-				letter-spacing: 1.2
-			span
-				color: #fff			
+			.skype
+
+				
+
+				span
+					@extend .d-b
+					color: #fff
+					transition: .3s
+
+				
+			.skype
+				p
+					margin-left: 10px
+					color: #fff
+					letter-spacing: 1.2
+
+
+			.gmail ,
+			.call
+				a
+					text-decoration: none
+					color: #fff
+					
+					margin-left: 10px
+					letter-spacing: 1.2
+				span
+					color: #fff			
 
 
 		
