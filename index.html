@@ -10,28 +10,16 @@
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="src/css/preloader.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
-<style>
-  @media screen and (max-width: 800px) {
-    .wow{
-        animation-name: none !important;
-        visibility: visible !important;
-    }
 
-    
-}
-</style>
+
+
 </head>
 
 <body>
  <div class="loaderArea">
    <div class="loader"></div>
 </div>
-  <section class="slider">
-  	
-  </section>
 </body>
 <main>
     <section class="slider">
@@ -66,13 +54,13 @@
                   <a href="#" class="item__link active__item" data-link="0" id="m1" >Home</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#"  class="item__link" data-link="1" id="m2">Our Work</a>
+                  <a href="#"  class="item__link" data-link="1" id="m2">About Me</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#"  class="item__link" data-link="2" id="m3">About Us</a>
+                  <a href="#"  class="item__link" data-link="2" id="m3">Portfolio</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="item__link" data-link="3" id="m4">Contact</a>
+                  <a href="#" class="item__link" data-link="3" id="m4">Contact details</a>
                 </li>
               </ul>
               <div class="header__burger-menu" id="nav-icon1">
@@ -88,34 +76,38 @@
         			<a href="#" id="mob1">Home</a>
         		</li>
         		<li class="menu__item-mobile">
-        			<a href="#" id="mob2">Our Work</a>
+        			<a href="#" id="mob2">About Me</a>
         		</li>
         		<li class="menu__item-mobile">
-        			<a href="#" id="mob3">About Us</a>
+        			<a href="#" id="mob3">Portfolio</a>
         		</li>
         		<li class="menu__item-mobile">
-        			<a href="#" id="mob4">Contact</a>
+        			<a href="#" id="mob4">Contact details</a>
         		</li>
         	</ul>
         </nav>
     </header>
-     <section class="biography wow bounceInDown" >
+     <section class="biography" >
       <div class="container text-center">
           <h2 class="biography__title ">
               About Me
           </h2>
-          <div class="biography__photo wow shake" style="background-image: url('./src/img/avatar.jpg')">
+          <div class="biography-wrapper">
+          		<div class="biography__photo" style="background-image: url('./src/img/avatar.jpg')">
             
+	            </div>
+	          <p class="biography__description">
+	          	Hello! <br>I'm front-end developer.
+	            I work for about a year in company "Remote Employees" in the position Front-end developer.I'm studied at the computer academy "Шаг".I have skills like: C/C++ ,C# , HTML5 , CSS3 , Wordpress, Basic PHP/MySQL ,
+	            Gulp , SASS, BEM ,JavaScript/JQuery , Avocode , Adobe Photoshop , GIT. 
+	          </p>
           </div>
-          <p class="biography__description">
-            At the moment I'm work in company "Remote Employees" in the position Front-end developer.I'm studied at the computer academy "Шаг".I have skills like: C/C++ ,C# , HTML5 , CSS3 , Wordpress, Basic PHP/MySQL ,
-            Gulp , SASS, BEM ,JavaScript/JQuery , Avocode , Adobe Photoshop , GIT. 
-          </p>
+         
 
 
        <div class="skills">
                   <div class="skills-title">
-                     My skills
+                     My skills:
                   </div>
                   <div class="skills-box df align-center justify-center">
                      <div class="skills-block">
@@ -222,21 +214,21 @@
             <h3 class="portfolio__subtitle">Check Out Our Projects on Dribbble.</h3>
             <div class="portfolio__items">
               
-                 <div class="portfolio__item wow zoomIn" data-wow-delay=".5s" style="background-image: url('./src/img/Layout-9.png')">
+                 <div class="portfolio__item" style="background-image: url('./src/img/Layout-9.png')">
 
                     <a href="https://dankegrafik.com" class="overlay-item">
                       
                     </a>
                     <a href="https://dankegrafik.com" class="portfolio__item-hidden-link">https://dankegrafik.com</a>
                 </div>
-                  <div class="portfolio__item wow zoomIn" data-wow-delay=".7s" style="background-image: url('./src/img/shan3.png')">
+                  <div class="portfolio__item "style="background-image: url('./src/img/shan3.png')">
 
                     <a href="https://regionalservices.net/" class="overlay-item">
                       
                     </a>
                     <a href="https://regionalservices.net/" class="portfolio__item-hidden-link">https://regionalservices.net/</a>
                 </div> 
-                <div class="portfolio__item wow zoomIn" data-wow-delay=".9s" style="background-image: url('./src/img/Projeckt-7.png')">
+                <div class="portfolio__item " style="background-image: url('./src/img/Projeckt-7.png')">
 
                     <a href="https://jazz-vibes.com/" class="overlay-item">
                       
@@ -244,28 +236,28 @@
                     <a href="https://jazz-vibes.com/" class="portfolio__item-hidden-link">https://jazz-vibes.com/</a>
                 </div>
               
-                  <div class="portfolio__item wow zoomIn hidden-portfolio" data-wow-delay="1.1s" style="background-image: url('./src/img/Projeckt-5_1_.png')">
+                  <div class="portfolio__item  hidden-portfolio" style="background-image: url('./src/img/Projeckt-5_1_.png')">
 
                     <a href="https://davedenemark.com/" class="overlay-item">
                       
                     </a>
                     <a href="https://davedenemark.com/" class="portfolio__item-hidden-link">https://davedenemark.com/</a>
                 </div>
-                  <div class="portfolio__item wow zoomIn  hidden-portfolio" data-wow-delay="1.1s" style="background-image: url('./src/img/Sch.png')">
+                  <div class="portfolio__item   hidden-portfolio" style="background-image: url('./src/img/Sch.png')">
 
                     <a href="https://dutchdesign-boot.com/" class="overlay-item">
                       
                     </a>
                     <a href="https://dutchdesign-boot.com/" class="portfolio__item-hidden-link">  https://dutchdesign-boot.com/</a>
                 </div>
-                  <div class="portfolio__item wow zoomIn  hidden-portfolio" data-wow-delay="1.1s" style="background-image: url('./src/img/modernf.png')">
+                  <div class="portfolio__item   hidden-portfolio" style="background-image: url('./src/img/modernf.png')">
 
                     <a href="https://modernfurniturestyle.com/kreditkarten-fur-einkaufe/" class="overlay-item">
                       
                     </a>
                     <a href="https://modernfurniturestyle.com/kreditkarten-fur-einkaufe/" class="portfolio__item-hidden-link">  https://modernfurniturestyle.com</a>
                 </div>
-                 <div class="portfolio__item wow zoomIn  hidden-portfolio"  data-wow-delay="1.1s" style="background-image: url('./src/img/main-page.png')">
+                 <div class="portfolio__item   hidden-portfolio"  style="background-image: url('./src/img/main-page.png')">
 
                     <a href="https://heimdallrsolutions.com/" class="overlay-item">
                       
@@ -285,99 +277,31 @@
 <footer class="footer">
   <div class="container">
       <a href="#" class="logo">PAWLOW</a>
-      
+      <div class="footer_contacts">
+      		<div class="skype">
+      			<span class="icon-skype"></span>
+      			<p>sashapawlow726</p>
+      		</div>
+      		<div class="gmail">
+      			<span class="icon-gmail"></span>
+      			<a href="mailto:sashapawlow726@gmail.com">sashapawlow726@gmail.com</a>
+      		</div>
+      		<div class="call">
+      			<span class="icon-phone-circled"></span>
+      			<a href="tel:+380660845241">+380660845241(Viber)</a>
+      		</div>
+      </div>
   </div>
 </footer>
 
 
-
-
-
-<!-- <script src="src/js/jquery.min.js"></script>
-<script src="src/js/wow.min.js"></script> -->
+  <script src="src/js/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script src="src/js/script.js">	
 </script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
 <script src="src/js/common.js"></script>
 
-
-<script>
-
-wow = new WOW({
-  mobile: false
-})
-
-	new WOW().init();
-</script>
-<script>
-  $(window).on('load', function () {
-    $preloader = $('.loaderArea'),
-      $loader = $preloader.find('.loader');
-    $loader.fadeOut();
-    $preloader.delay(350).fadeOut('slow');
-  });
-
-
-var typed = new Typed(".element", {
-  strings: ["руддщ",
-          "Hello!<br> I'm Sasha.<br> I'm front-end developer <br>Welcome to my site :)"
-  ] ,
-  typeSpeed: 40,
-  showCursor: false,
-});
-
-$(window).resize(function() {
-  if(document.documentElement.clientWidth < 764) {
-    //this will execute on page load(to be more specific when document ready event occurs)
-if ($('.portfolio__item').length > 3) {
-  $('.portfolio__item:gt(2)').hide();
-  $('.show_more').show();
-}
-
-$('.show_more').on('click', function() {
-  //toggle elements with class .ty-compact-list that their index is bigger than 2
-  $('.portfolio__item:gt(2)').toggle();
-  //change text of show more element just for demonstration purposes to this demo
-  $(this).text() === 'Show more' ? $(this).text('Show less') : $(this).text('Show more');
-});
-  }
-  else {
-     $('.portfolio__item:gt(2)').show();
-     $('.show_more').hide();
-  }
-});
-
-
-$(window).resize(function() {
-  if(document.documentElement.clientWidth < 764) {
-    //this will execute on page load(to be more specific when document ready event occurs)
-if ($('.skills-content').length > 3) {
-  $('.skills-content:gt(2)').hide();
-  $('.show_skills').show();
-}
-
-$('.show_skills').on('click', function() {
-  //toggle elements with class .ty-compact-list that their index is bigger than 2
-  $('.skills-content:gt(2)').toggle();
-  //change text of show more element just for demonstration purposes to this demo
-  $(this).text() === 'Show more' ? $(this).text('Show less') : $(this).text('Show more');
-});
-  }
-  else {
-     $('.skills-content:gt(2)').show();
-     $('.show_more').hide();
-  }
-});
-
-
-
-
-
-
-
-
-
-</script>
 </html>
 
 
